@@ -12,8 +12,8 @@ const Navbar = () => {
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <Logo/>
     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-      <a to={'/'} className="mr-5 hover:text-gray-900">Home</a>
-      <a to={'/cart'} className="mr-5 hover:text-gray-900">Cart</a>
+      <Link to={'/'} className="mr-5 hover:text-gray-900">Home</Link>
+      <Link to={'/cart'} className="mr-5 hover:text-gray-900">Cart</Link>
      
     </nav>
     <button className="inline-flex items-center bg-indigo-600 border-0 py-1 px-3 text-white focus:outline-none hover:bg-indigo-400 rounded text-base mt-4 md:mt-0">Login

@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux'
 import { addProducts } from './redux/Product.Slice'
 import SingleProductPage from './pages/SingleProductPage'
 import Loader from './components/Loader'
+import CartPage from './pages/CartPage'
 
 const IndexPage = () => {
 
@@ -49,6 +50,9 @@ const IndexPage = () => {
           <Routes>
             <Route path='/' element={<HomePage/>}/>
             <Route path = '/product/:id' element={<SingleProductPage/>}/>
+            <Route path = '/cart' element={<CartPage/>}/>
+
+
             <Route path='*' Component={ErrorPage}/>
           </Routes>
         <Footer/>  
