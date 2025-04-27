@@ -3,7 +3,7 @@ import { useParams } from 'react-router'
 import Loader from '../components/Loader'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
-import { toast } from 'react-toastify'
+// import { toast } from 'react-toastify'
 import { addProduct, CartSlicePath } from '../redux/Cart.Slice'
 
 const SingleProductPage = () => {
@@ -70,8 +70,10 @@ const SingleProductPage = () => {
 
         dispatch(addProduct(item))
 
-        toast.success("Item Added into Cart")
+      
       }
+
+      
 
   return (
     <>
@@ -163,3 +165,5 @@ const SingleProductPage = () => {
 }
 
 export default SingleProductPage
+
+// export module {addToCart}

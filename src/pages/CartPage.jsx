@@ -1,8 +1,14 @@
 import React from 'react'
 import PeopleAlsorandombought from '../components/cart/PeopleAlsorandombought'
 import CartCard from '../components/cart/CartCard'
+import { useSelector } from 'react-redux'
+import { CartSlicePath } from '../redux/Cart.Slice'
 
 const CartPage = () => {
+
+
+
+  const cart_data = useSelector(CartSlicePath)
   return (
     <>
     
@@ -13,8 +19,8 @@ const CartPage = () => {
       <div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
         <div className="space-y-6">
           {
-            Array(5).fill(0).map((cur,i)=>{
-              return <CartCard key={i}/> 
+               cart_data && cart_data.length>0 && cart_data.map((cur,i)=>{
+              return <CartCard key={i} data={cur}/> 
             })
           }
           {/* <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm sdvdvborder-gray-700 sdvdvbg-gray-800 md:p-6">
@@ -199,7 +205,7 @@ const CartPage = () => {
           <div className="mt-6 grid grid-cols-3 gap-4 sm:mt-8">
 
             {
-                Array(3).fill(null).map((cur,i)=>{
+                    Array(3).fill(null).map((cur,i)=>{
                     return <PeopleAlsorandombought key={i}/>
                 })
             }
